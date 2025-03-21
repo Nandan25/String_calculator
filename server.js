@@ -25,6 +25,7 @@ function sumNumbers(numberArray) {
     numberArray.forEach(num => {
         const number = parseInt(num);
         if (isNaN(number)) return; // Ignore empty strings or invalid numbers
+        if (number > 1000) return;
         if (number < 0) {
             negatives.push(number);
         }
@@ -48,4 +49,6 @@ console.log(add("1,5,6"));  //12
 console.log(add("1,5,6,4"));  //16  
 console.log(add("1\n2,3"));  //6  
 console.log(add("//;\n1;2"));  //3
+console.log(add("2+1001"));  //2
 console.log(add("//;\n1;2;-1"));  //Negative numbers not allowed -1
+
