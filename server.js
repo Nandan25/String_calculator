@@ -6,6 +6,8 @@ const add = (numberString) => {
 };
 
 
-console.log(add(""));
-console.log(add("1"));
-console.log(add("1,5"));
+console.log(add(""));  //0
+console.log(add("1"));  //1
+console.log(add("1,5"));  //6
+console.log(add("1,5,6"));  //12 
+console.log(add("1,5,6,4"));  //16
